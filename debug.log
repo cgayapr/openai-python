@@ -1,0 +1,422 @@
+2024-12-09 23:14:53,393 [DEBUG] Starting new HTTPS connection (1): pypi.org:443
+2024-12-09 23:14:53,455 [DEBUG] https://pypi.org:443 "GET /pypi/praw/json HTTP/11" 200 36290
+2024-12-09 23:14:53,465 [INFO] Successfully initialized Reddit API.
+2024-12-09 23:14:53,466 [DEBUG] Fetching: GET https://oauth.reddit.com/r/dropship/new at 1733804093.4663098
+2024-12-09 23:14:53,466 [DEBUG] Data: None
+2024-12-09 23:14:53,466 [DEBUG] Params: {'limit': 200, 'raw_json': 1}
+2024-12-09 23:14:53,468 [DEBUG] Starting new HTTPS connection (1): www.reddit.com:443
+2024-12-09 23:14:53,570 [DEBUG] https://www.reddit.com:443 "POST /api/v1/access_token HTTP/11" 200 656
+2024-12-09 23:14:53,573 [DEBUG] Starting new HTTPS connection (1): oauth.reddit.com:443
+2024-12-09 23:14:54,305 [DEBUG] https://oauth.reddit.com:443 "GET /r/dropship/new?limit=200&raw_json=1 HTTP/11" 200 52045
+2024-12-09 23:14:54,323 [DEBUG] Response: 200 (52045 bytes) (rst-306:rem-999.0:used-1 ratelimit) at 1733804094.3233569
+2024-12-09 23:14:54,335 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1hae4tc/ at 1733804094.335097
+2024-12-09 23:14:54,335 [DEBUG] Data: None
+2024-12-09 23:14:54,335 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:14:54,468 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1hae4tc/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 3187
+2024-12-09 23:14:54,469 [DEBUG] Response: 200 (3187 bytes) (rst-305:rem-998.0:used-2 ratelimit) at 1733804094.4695559
+2024-12-09 23:14:54,471 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9vjwq/ at 1733804094.471811
+2024-12-09 23:14:54,471 [DEBUG] Data: None
+2024-12-09 23:14:54,472 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:14:54,602 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9vjwq/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 3408
+2024-12-09 23:14:54,605 [DEBUG] Response: 200 (3408 bytes) (rst-305:rem-997.0:used-3 ratelimit) at 1733804094.605022
+2024-12-09 23:14:54,607 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9sr7i/ at 1733804094.607161
+2024-12-09 23:14:54,607 [DEBUG] Data: None
+2024-12-09 23:14:54,607 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:14:54,757 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9sr7i/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 3899
+2024-12-09 23:14:54,758 [DEBUG] Response: 200 (3899 bytes) (rst-305:rem-996.0:used-4 ratelimit) at 1733804094.75892
+2024-12-09 23:14:54,760 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9omov/ at 1733804094.76074
+2024-12-09 23:14:54,760 [DEBUG] Data: None
+2024-12-09 23:14:54,760 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:14:55,120 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9omov/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 4230
+2024-12-09 23:14:55,121 [DEBUG] Response: 200 (4230 bytes) (rst-305:rem-995.0:used-5 ratelimit) at 1733804095.121963
+2024-12-09 23:14:55,123 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9fg8c/ at 1733804095.1236842
+2024-12-09 23:14:55,123 [DEBUG] Data: None
+2024-12-09 23:14:55,123 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:14:55,275 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9fg8c/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 6631
+2024-12-09 23:14:55,277 [DEBUG] Response: 200 (6631 bytes) (rst-304:rem-994.0:used-6 ratelimit) at 1733804095.277109
+2024-12-09 23:14:55,279 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h93w33/ at 1733804095.279425
+2024-12-09 23:14:55,279 [DEBUG] Data: None
+2024-12-09 23:14:55,279 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:14:55,471 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h93w33/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 5247
+2024-12-09 23:14:55,473 [DEBUG] Response: 200 (5247 bytes) (rst-304:rem-993.0:used-7 ratelimit) at 1733804095.4729862
+2024-12-09 23:14:55,475 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h8p7ym/ at 1733804095.475589
+2024-12-09 23:14:55,475 [DEBUG] Data: None
+2024-12-09 23:14:55,475 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:14:55,651 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h8p7ym/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 7120
+2024-12-09 23:14:55,653 [DEBUG] Response: 200 (7120 bytes) (rst-304:rem-992.0:used-8 ratelimit) at 1733804095.653257
+2024-12-09 23:14:55,656 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h8lxr0/ at 1733804095.656119
+2024-12-09 23:14:55,656 [DEBUG] Data: None
+2024-12-09 23:14:55,656 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:14:55,800 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h8lxr0/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 3397
+2024-12-09 23:14:55,801 [DEBUG] Response: 200 (3397 bytes) (rst-304:rem-991.0:used-9 ratelimit) at 1733804095.801724
+2024-12-09 23:14:55,802 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h8ktl3/ at 1733804095.8029828
+2024-12-09 23:14:55,803 [DEBUG] Data: None
+2024-12-09 23:14:55,803 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:14:56,144 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h8ktl3/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 7672
+2024-12-09 23:14:56,146 [DEBUG] Response: 200 (7672 bytes) (rst-304:rem-990.0:used-10 ratelimit) at 1733804096.146434
+2024-12-09 23:14:56,150 [DEBUG] Fetching: GET https://oauth.reddit.com/r/dropship/new at 1733804096.15087
+2024-12-09 23:14:56,151 [DEBUG] Data: None
+2024-12-09 23:14:56,151 [DEBUG] Params: {'after': 't3_1h3s6y6', 'limit': 200, 'raw_json': 1}
+2024-12-09 23:14:56,963 [DEBUG] https://oauth.reddit.com:443 "GET /r/dropship/new?limit=200&after=t3_1h3s6y6&raw_json=1 HTTP/11" 200 51688
+2024-12-09 23:14:56,965 [DEBUG] Response: 200 (51688 bytes) (rst-303:rem-989.0:used-11 ratelimit) at 1733804096.9659688
+2024-12-09 23:14:56,978 [INFO] Fetched 9 posts after filtering.
+2024-12-09 23:14:56,992 [ERROR] Error filtering posts with GPT-3.5.
+Traceback (most recent call last):
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 114, in filter_good_posts_with_gpt35
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+    ...<5 lines>...
+        temperature=0.7,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/openai/lib/_old_api.py", line 39, in __call__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-12-09 23:14:56,995 [ERROR] Error in run_script
+Traceback (most recent call last):
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 114, in filter_good_posts_with_gpt35
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+    ...<5 lines>...
+        temperature=0.7,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/openai/lib/_old_api.py", line 39, in __call__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 189, in run_script
+    good_posts = filter_good_posts_with_gpt35(posts)
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 131, in filter_good_posts_with_gpt35
+    raise RuntimeError(f"Error filtering posts with GPT-3.5: {e}")
+RuntimeError: Error filtering posts with GPT-3.5: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-12-09 23:18:44,569 [INFO] Successfully initialized Reddit API.
+2024-12-09 23:18:44,570 [DEBUG] Fetching: GET https://oauth.reddit.com/r/dropship/new at 1733804324.570518
+2024-12-09 23:18:44,570 [DEBUG] Data: None
+2024-12-09 23:18:44,570 [DEBUG] Params: {'limit': 200, 'raw_json': 1}
+2024-12-09 23:18:44,574 [DEBUG] Starting new HTTPS connection (1): www.reddit.com:443
+2024-12-09 23:18:44,906 [DEBUG] https://www.reddit.com:443 "POST /api/v1/access_token HTTP/11" 200 655
+2024-12-09 23:18:44,912 [DEBUG] Starting new HTTPS connection (1): oauth.reddit.com:443
+2024-12-09 23:18:45,933 [DEBUG] https://oauth.reddit.com:443 "GET /r/dropship/new?limit=200&raw_json=1 HTTP/11" 200 52059
+2024-12-09 23:18:45,998 [DEBUG] Response: 200 (52059 bytes) (rst-74:rem-988.0:used-12 ratelimit) at 1733804325.998317
+2024-12-09 23:18:46,005 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1hae4tc/ at 1733804326.005583
+2024-12-09 23:18:46,005 [DEBUG] Data: None
+2024-12-09 23:18:46,005 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:18:46,248 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1hae4tc/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 3188
+2024-12-09 23:18:46,250 [DEBUG] Response: 200 (3188 bytes) (rst-73:rem-987.0:used-13 ratelimit) at 1733804326.2504792
+2024-12-09 23:18:46,252 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9vjwq/ at 1733804326.25244
+2024-12-09 23:18:46,252 [DEBUG] Data: None
+2024-12-09 23:18:46,252 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:18:46,482 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9vjwq/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 3407
+2024-12-09 23:18:46,483 [DEBUG] Response: 200 (3407 bytes) (rst-73:rem-986.0:used-14 ratelimit) at 1733804326.4837031
+2024-12-09 23:18:46,485 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9omov/ at 1733804326.485423
+2024-12-09 23:18:46,485 [DEBUG] Data: None
+2024-12-09 23:18:46,485 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:18:46,719 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9omov/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 4231
+2024-12-09 23:18:46,721 [DEBUG] Response: 200 (4231 bytes) (rst-73:rem-985.0:used-15 ratelimit) at 1733804326.721081
+2024-12-09 23:18:46,722 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9fg8c/ at 1733804326.722373
+2024-12-09 23:18:46,722 [DEBUG] Data: None
+2024-12-09 23:18:46,722 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:18:46,970 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9fg8c/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 6629
+2024-12-09 23:18:46,971 [DEBUG] Response: 200 (6629 bytes) (rst-73:rem-984.0:used-16 ratelimit) at 1733804326.971384
+2024-12-09 23:18:46,973 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h93w33/ at 1733804326.973284
+2024-12-09 23:18:46,973 [DEBUG] Data: None
+2024-12-09 23:18:46,973 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:18:47,364 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h93w33/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 5243
+2024-12-09 23:18:47,365 [DEBUG] Response: 200 (5243 bytes) (rst-72:rem-983.0:used-17 ratelimit) at 1733804327.365511
+2024-12-09 23:18:47,367 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h8p7ym/ at 1733804327.367786
+2024-12-09 23:18:47,367 [DEBUG] Data: None
+2024-12-09 23:18:47,367 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:18:47,624 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h8p7ym/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 7120
+2024-12-09 23:18:47,626 [DEBUG] Response: 200 (7120 bytes) (rst-72:rem-982.0:used-18 ratelimit) at 1733804327.626119
+2024-12-09 23:18:47,628 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h8lxr0/ at 1733804327.628983
+2024-12-09 23:18:47,629 [DEBUG] Data: None
+2024-12-09 23:18:47,629 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:18:47,855 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h8lxr0/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 3399
+2024-12-09 23:18:47,856 [DEBUG] Response: 200 (3399 bytes) (rst-72:rem-981.0:used-19 ratelimit) at 1733804327.856444
+2024-12-09 23:18:47,858 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h8ktl3/ at 1733804327.8585
+2024-12-09 23:18:47,858 [DEBUG] Data: None
+2024-12-09 23:18:47,858 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:18:48,285 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h8ktl3/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 7665
+2024-12-09 23:18:48,285 [DEBUG] Response: 200 (7665 bytes) (rst-71:rem-980.0:used-20 ratelimit) at 1733804328.285377
+2024-12-09 23:18:48,286 [DEBUG] Fetching: GET https://oauth.reddit.com/r/dropship/new at 1733804328.286581
+2024-12-09 23:18:48,286 [DEBUG] Data: None
+2024-12-09 23:18:48,286 [DEBUG] Params: {'after': 't3_1h3s6y6', 'limit': 200, 'raw_json': 1}
+2024-12-09 23:18:49,176 [DEBUG] https://oauth.reddit.com:443 "GET /r/dropship/new?limit=200&after=t3_1h3s6y6&raw_json=1 HTTP/11" 200 51697
+2024-12-09 23:18:49,242 [DEBUG] Response: 200 (51697 bytes) (rst-71:rem-979.0:used-21 ratelimit) at 1733804329.2426171
+2024-12-09 23:18:49,254 [INFO] Fetched 8 posts after filtering.
+2024-12-09 23:18:49,265 [ERROR] Error filtering posts with GPT-3.5.
+Traceback (most recent call last):
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 114, in filter_good_posts_with_gpt35
+    response = openai.Chat.create(
+               ^^^^^^^^^^^
+AttributeError: module 'openai' has no attribute 'Chat'. Did you mean: 'chat'?
+2024-12-09 23:18:49,266 [ERROR] Error in run_script
+Traceback (most recent call last):
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 114, in filter_good_posts_with_gpt35
+    response = openai.Chat.create(
+               ^^^^^^^^^^^
+AttributeError: module 'openai' has no attribute 'Chat'. Did you mean: 'chat'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 189, in run_script
+    good_posts = filter_good_posts_with_gpt35(posts)
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 131, in filter_good_posts_with_gpt35
+    raise RuntimeError(f"Error filtering posts with GPT-3.5: {e}")
+RuntimeError: Error filtering posts with GPT-3.5: module 'openai' has no attribute 'Chat'
+2024-12-09 23:40:52,504 [INFO] Successfully initialized Reddit API.
+2024-12-09 23:40:52,505 [DEBUG] Fetching: GET https://oauth.reddit.com/r/dropship/new at 1733805652.50528
+2024-12-09 23:40:52,505 [DEBUG] Data: None
+2024-12-09 23:40:52,505 [DEBUG] Params: {'limit': 200, 'raw_json': 1}
+2024-12-09 23:40:52,508 [DEBUG] Starting new HTTPS connection (1): www.reddit.com:443
+2024-12-09 23:40:52,619 [DEBUG] https://www.reddit.com:443 "POST /api/v1/access_token HTTP/11" 200 651
+2024-12-09 23:40:52,625 [DEBUG] Starting new HTTPS connection (1): oauth.reddit.com:443
+2024-12-09 23:40:53,474 [DEBUG] https://oauth.reddit.com:443 "GET /r/dropship/new?limit=200&raw_json=1 HTTP/11" 200 52101
+2024-12-09 23:40:53,490 [DEBUG] Response: 200 (52101 bytes) (rst-547:rem-999.0:used-1 ratelimit) at 1733805653.490626
+2024-12-09 23:40:53,503 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1hae4tc/ at 1733805653.503911
+2024-12-09 23:40:53,504 [DEBUG] Data: None
+2024-12-09 23:40:53,504 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:40:53,651 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1hae4tc/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 3188
+2024-12-09 23:40:53,652 [DEBUG] Response: 200 (3188 bytes) (rst-546:rem-998.0:used-2 ratelimit) at 1733805653.652489
+2024-12-09 23:40:53,653 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9vjwq/ at 1733805653.653036
+2024-12-09 23:40:53,653 [DEBUG] Data: None
+2024-12-09 23:40:53,653 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:40:53,784 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9vjwq/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 3408
+2024-12-09 23:40:53,785 [DEBUG] Response: 200 (3408 bytes) (rst-546:rem-997.0:used-3 ratelimit) at 1733805653.7859242
+2024-12-09 23:40:53,788 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9omov/ at 1733805653.787992
+2024-12-09 23:40:53,788 [DEBUG] Data: None
+2024-12-09 23:40:53,788 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:40:53,923 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9omov/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 4228
+2024-12-09 23:40:53,925 [DEBUG] Response: 200 (4228 bytes) (rst-546:rem-996.0:used-4 ratelimit) at 1733805653.9251451
+2024-12-09 23:40:53,926 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9fg8c/ at 1733805653.926789
+2024-12-09 23:40:53,926 [DEBUG] Data: None
+2024-12-09 23:40:53,927 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:40:54,090 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9fg8c/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 6631
+2024-12-09 23:40:54,091 [DEBUG] Response: 200 (6631 bytes) (rst-545:rem-995.0:used-5 ratelimit) at 1733805654.091498
+2024-12-09 23:40:54,093 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h93w33/ at 1733805654.093651
+2024-12-09 23:40:54,093 [DEBUG] Data: None
+2024-12-09 23:40:54,093 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:40:54,289 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h93w33/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 5242
+2024-12-09 23:40:54,290 [DEBUG] Response: 200 (5242 bytes) (rst-545:rem-994.0:used-6 ratelimit) at 1733805654.290751
+2024-12-09 23:40:54,293 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h8p7ym/ at 1733805654.293822
+2024-12-09 23:40:54,294 [DEBUG] Data: None
+2024-12-09 23:40:54,294 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:40:54,475 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h8p7ym/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 7119
+2024-12-09 23:40:54,477 [DEBUG] Response: 200 (7119 bytes) (rst-545:rem-993.0:used-7 ratelimit) at 1733805654.477377
+2024-12-09 23:40:54,480 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h8lxr0/ at 1733805654.4808161
+2024-12-09 23:40:54,481 [DEBUG] Data: None
+2024-12-09 23:40:54,481 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:40:54,615 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h8lxr0/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 3400
+2024-12-09 23:40:54,617 [DEBUG] Response: 200 (3400 bytes) (rst-545:rem-992.0:used-8 ratelimit) at 1733805654.617085
+2024-12-09 23:40:54,618 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h8ktl3/ at 1733805654.6189592
+2024-12-09 23:40:54,619 [DEBUG] Data: None
+2024-12-09 23:40:54,619 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:40:54,904 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h8ktl3/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 7667
+2024-12-09 23:40:54,905 [DEBUG] Response: 200 (7667 bytes) (rst-545:rem-991.0:used-9 ratelimit) at 1733805654.9057899
+2024-12-09 23:40:54,909 [DEBUG] Fetching: GET https://oauth.reddit.com/r/dropship/new at 1733805654.909388
+2024-12-09 23:40:54,909 [DEBUG] Data: None
+2024-12-09 23:40:54,909 [DEBUG] Params: {'after': 't3_1h3s6y6', 'limit': 200, 'raw_json': 1}
+2024-12-09 23:40:55,819 [DEBUG] https://oauth.reddit.com:443 "GET /r/dropship/new?limit=200&after=t3_1h3s6y6&raw_json=1 HTTP/11" 200 51729
+2024-12-09 23:40:55,823 [DEBUG] Response: 200 (51729 bytes) (rst-545:rem-990.0:used-10 ratelimit) at 1733805655.823154
+2024-12-09 23:40:55,836 [INFO] Fetched 8 posts after filtering.
+2024-12-09 23:40:55,850 [ERROR] Error filtering posts with GPT-3.5.
+Traceback (most recent call last):
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 114, in filter_good_posts_with_gpt35
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+    ...<5 lines>...
+        temperature=0.7,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/openai/lib/_old_api.py", line 39, in __call__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-12-09 23:40:55,852 [ERROR] Error in run_script
+Traceback (most recent call last):
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 114, in filter_good_posts_with_gpt35
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+    ...<5 lines>...
+        temperature=0.7,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/openai/lib/_old_api.py", line 39, in __call__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 188, in run_script
+    good_posts = filter_good_posts_with_gpt35(posts)
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 130, in filter_good_posts_with_gpt35
+    raise RuntimeError(f"Error filtering posts with GPT-3.5: {e}")
+RuntimeError: Error filtering posts with GPT-3.5: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-12-09 23:42:49,840 [INFO] Successfully initialized Reddit API.
+2024-12-09 23:42:49,840 [DEBUG] Fetching: GET https://oauth.reddit.com/r/dropship/new at 1733805769.840686
+2024-12-09 23:42:49,840 [DEBUG] Data: None
+2024-12-09 23:42:49,841 [DEBUG] Params: {'limit': 200, 'raw_json': 1}
+2024-12-09 23:42:49,844 [DEBUG] Starting new HTTPS connection (1): www.reddit.com:443
+2024-12-09 23:42:50,147 [DEBUG] https://www.reddit.com:443 "POST /api/v1/access_token HTTP/11" 200 651
+2024-12-09 23:42:50,151 [DEBUG] Starting new HTTPS connection (1): oauth.reddit.com:443
+2024-12-09 23:42:51,132 [DEBUG] https://oauth.reddit.com:443 "GET /r/dropship/new?limit=200&raw_json=1 HTTP/11" 200 52079
+2024-12-09 23:42:51,200 [DEBUG] Response: 200 (52079 bytes) (rst-429:rem-989.0:used-11 ratelimit) at 1733805771.200772
+2024-12-09 23:42:51,213 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1hae4tc/ at 1733805771.213311
+2024-12-09 23:42:51,213 [DEBUG] Data: None
+2024-12-09 23:42:51,213 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:42:51,455 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1hae4tc/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 3188
+2024-12-09 23:42:51,457 [DEBUG] Response: 200 (3188 bytes) (rst-428:rem-988.0:used-12 ratelimit) at 1733805771.45728
+2024-12-09 23:42:51,459 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1ha9il4/ at 1733805771.459326
+2024-12-09 23:42:51,459 [DEBUG] Data: None
+2024-12-09 23:42:51,459 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:42:51,678 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1ha9il4/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 2894
+2024-12-09 23:42:51,679 [DEBUG] Response: 200 (2894 bytes) (rst-428:rem-987.0:used-13 ratelimit) at 1733805771.6797922
+2024-12-09 23:42:51,681 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9vjwq/ at 1733805771.6813061
+2024-12-09 23:42:51,681 [DEBUG] Data: None
+2024-12-09 23:42:51,681 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:42:51,909 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9vjwq/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 3408
+2024-12-09 23:42:51,910 [DEBUG] Response: 200 (3408 bytes) (rst-428:rem-986.0:used-14 ratelimit) at 1733805771.910948
+2024-12-09 23:42:51,912 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9v7dz/ at 1733805771.912642
+2024-12-09 23:42:51,912 [DEBUG] Data: None
+2024-12-09 23:42:51,912 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:42:52,126 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9v7dz/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 2603
+2024-12-09 23:42:52,128 [DEBUG] Response: 200 (2603 bytes) (rst-427:rem-985.0:used-15 ratelimit) at 1733805772.12834
+2024-12-09 23:42:52,130 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9omov/ at 1733805772.130259
+2024-12-09 23:42:52,130 [DEBUG] Data: None
+2024-12-09 23:42:52,130 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:42:52,346 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9omov/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 4229
+2024-12-09 23:42:52,348 [DEBUG] Response: 200 (4229 bytes) (rst-427:rem-984.0:used-16 ratelimit) at 1733805772.3482711
+2024-12-09 23:42:52,349 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h9fg8c/ at 1733805772.3496761
+2024-12-09 23:42:52,349 [DEBUG] Data: None
+2024-12-09 23:42:52,349 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:42:52,598 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h9fg8c/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 6631
+2024-12-09 23:42:52,599 [DEBUG] Response: 200 (6631 bytes) (rst-427:rem-983.0:used-17 ratelimit) at 1733805772.5997388
+2024-12-09 23:42:52,602 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h93w33/ at 1733805772.6024299
+2024-12-09 23:42:52,602 [DEBUG] Data: None
+2024-12-09 23:42:52,602 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:42:52,974 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h93w33/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 5247
+2024-12-09 23:42:52,976 [DEBUG] Response: 200 (5247 bytes) (rst-427:rem-982.0:used-18 ratelimit) at 1733805772.976397
+2024-12-09 23:42:52,979 [DEBUG] Fetching: GET https://oauth.reddit.com/comments/1h8p7ym/ at 1733805772.979136
+2024-12-09 23:42:52,979 [DEBUG] Data: None
+2024-12-09 23:42:52,979 [DEBUG] Params: {'limit': 2048, 'raw_json': 1, 'sort': 'confidence'}
+2024-12-09 23:42:53,247 [DEBUG] https://oauth.reddit.com:443 "GET /comments/1h8p7ym/?limit=2048&sort=confidence&raw_json=1 HTTP/11" 200 7120
+2024-12-09 23:42:53,249 [DEBUG] Response: 200 (7120 bytes) (rst-426:rem-981.0:used-19 ratelimit) at 1733805773.2495182
+2024-12-09 23:42:53,252 [DEBUG] Fetching: GET https://oauth.reddit.com/r/dropship/new at 1733805773.252785
+2024-12-09 23:42:53,252 [DEBUG] Data: None
+2024-12-09 23:42:53,253 [DEBUG] Params: {'after': 't3_1h3s6y6', 'limit': 200, 'raw_json': 1}
+2024-12-09 23:42:54,303 [DEBUG] https://oauth.reddit.com:443 "GET /r/dropship/new?limit=200&after=t3_1h3s6y6&raw_json=1 HTTP/11" 200 51711
+2024-12-09 23:42:54,306 [DEBUG] Response: 200 (51711 bytes) (rst-426:rem-980.0:used-20 ratelimit) at 1733805774.306784
+2024-12-09 23:42:54,319 [INFO] Fetched 8 posts after filtering.
+2024-12-09 23:42:54,331 [ERROR] Error filtering posts with GPT-3.5.
+Traceback (most recent call last):
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 114, in filter_good_posts_with_gpt35
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+    ...<5 lines>...
+        temperature=0.7,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/openai/lib/_old_api.py", line 39, in __call__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-12-09 23:42:54,333 [ERROR] Error in run_script
+Traceback (most recent call last):
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 114, in filter_good_posts_with_gpt35
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+    ...<5 lines>...
+        temperature=0.7,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/openai/lib/_old_api.py", line 39, in __call__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 188, in run_script
+    good_posts = filter_good_posts_with_gpt35(posts)
+  File "/Users/chrisgaya/openai-python/reddit_crawler.py", line 130, in filter_good_posts_with_gpt35
+    raise RuntimeError(f"Error filtering posts with GPT-3.5: {e}")
+RuntimeError: Error filtering posts with GPT-3.5: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
