@@ -1,5 +1,36 @@
 # Changelog
 
+## 1.57.4 (2024-12-13)
+
+Full Changelog: [v1.57.3...v1.57.4](https://github.com/openai/openai-python/compare/v1.57.3...v1.57.4)
+
+### Chores
+
+* **internal:** remove some duplicated imports ([#1946](https://github.com/openai/openai-python/issues/1946)) ([f94fddd](https://github.com/openai/openai-python/commit/f94fddd377015764b3c82919fdf956f619447b77))
+* **internal:** updated imports ([#1948](https://github.com/openai/openai-python/issues/1948)) ([13971fc](https://github.com/openai/openai-python/commit/13971fc450106746c0ae02ab931e68b770ee105e))
+
+## 1.57.3 (2024-12-12)
+
+Full Changelog: [v1.57.2...v1.57.3](https://github.com/openai/openai-python/compare/v1.57.2...v1.57.3)
+
+### Chores
+
+* **internal:** add support for TypeAliasType ([#1942](https://github.com/openai/openai-python/issues/1942)) ([d3442ff](https://github.com/openai/openai-python/commit/d3442ff28f2394200e14122f683d1f94686e8231))
+* **internal:** bump pyright ([#1939](https://github.com/openai/openai-python/issues/1939)) ([190d1a8](https://github.com/openai/openai-python/commit/190d1a805dee7c37fb8f9dcb93b1715caa06cf95))
+
+## 1.57.2 (2024-12-10)
+
+Full Changelog: [v1.57.1...v1.57.2](https://github.com/openai/openai-python/compare/v1.57.1...v1.57.2)
+
+### Bug Fixes
+
+* **azure:** handle trailing slash in `azure_endpoint` ([#1935](https://github.com/openai/openai-python/issues/1935)) ([69b73c5](https://github.com/openai/openai-python/commit/69b73c553b1982277c2f1b9d110ed951ddca689e))
+
+
+### Documentation
+
+* **readme:** fix http client proxies example ([#1932](https://github.com/openai/openai-python/issues/1932)) ([7a83e0f](https://github.com/openai/openai-python/commit/7a83e0fe4cc29e484ae417448b002c997745e4a3))
+
 ## 1.57.1 (2024-12-09)
 
 Full Changelog: [v1.57.0...v1.57.1](https://github.com/openai/openai-python/compare/v1.57.0...v1.57.1)
