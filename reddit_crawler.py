@@ -281,15 +281,50 @@ def analyze_posts_with_gpt4(posts: list, subreddit_name: str) -> str:
         logging.exception("Error during analysis with GPT-4.")
         raise RuntimeError(f"Error during analysis: {e}")
 
-def fetch_latest_news(topic):
-    """Fetch the latest news articles for a given topic."""
-    # Simulating fetched news results (replace with API integration)
-    # Use APIs like Bing Search or Google News here.
-    return [
-        {"title": f"Latest news on {topic} - Article 1", "link": "https://example.com/article1"},
-        {"title": f"Latest news on {topic} - Article 2", "link": "https://example.com/article2"},
-        {"title": f"Latest news on {topic} - Article 3", "link": "https://example.com/article3"},
-    ]
+
+def fetch_latest_news(keyword):
+    """Fetch the latest news articles using NewsSpider and update the progress bar."""
+    try:
+        # Reset the progress bar
+        progress_bar["value"] = 0
+        progress_bar.update()
+
+        output_file = "news_results.json"
+        if os.path.exists(output_file):
+            os.remove(output_file)  # Remove previous results if they exist
+
+        # Define a Scrapy process
+        process = CrawlerProcess(settings={
+            "FEEDS": {output_file: {"format": "json"}},
+            "LOG_LEVEL": "ERROR",  # Reduce noise in logs
+        })
+
+        def run_spider():
+            # Run the spider in the background
+            process.crawl("news_spider", keyword=keyword)
+            process.start()
+            progress_bar["value"] = 100  # Mark the progress bar as complete
+
+        # Start the Scrapy process in a thread to keep the GUI responsive
+        threading.Thread(target=run_spider, daemon=True).start()
+
+        # Increment progress bar over time (simulated updates)
+        for i in range(1, 101, 10):  # Increment by 10% every second
+            time.sleep(1)
+            progress_bar["value"] = i
+            progress_bar.update()
+
+        # Load and return results from the JSON file
+        if os.path.exists(output_file):
+            with open(output_file, "r") as file:
+                return json.load(file)
+        else:
+            return []
+    except Exception as e:
+        logging.exception("Error fetching news with NewsSpider.")
+        messagebox.showerror("Error", f"Error fetching news: {e}")
+        return []
+
 
 def load_search_history():
     """Load search history from a file."""
@@ -317,34 +352,51 @@ def display_history():
         history_list.insert(tk.END, entry["topic"])
 
 def open_selected_history():
-    """Open selected history topic results with progress tracking."""
+    """Open selected history topic results and display them."""
     selected_index = history_list.curselection()
     if not selected_index:
         messagebox.showerror("Error", "No history item selected!")
         return
 
-    progress_bar["value"] = 0
-    progress_bar.update()
+    # Reset the history tab progress bar
+    history_progress_bar["value"] = 0
+    history_progress_bar.update()
 
+    # Get the selected topic
     selected_topic = history_list.get(selected_index)
     history = load_search_history()
 
+    # Search for the topic in the history
     for entry in history:
         if entry["topic"] == selected_topic:
-            results_text.delete("1.0", tk.END)
-            progress_bar["value"] = 50
-            progress_bar.update()
+            try:
+                # Update progress bar midway
+                history_progress_bar["value"] = 50
+                history_progress_bar.update()
 
-            for i, result in enumerate(entry["results"], start=1):
-                results_text.insert(tk.END, f"{i}. {result['title']}\n{result['link']}\n\n")
+                # Clear the results area in the History Tab
+                results_text.delete("1.0", tk.END)
 
-            progress_bar["value"] = 100
-            progress_bar.update()
-            return
+                # Display the results
+                for i, result in enumerate(entry["results"], start=1):
+                    results_text.insert(tk.END, f"{i}. {result['title']}\n{result['url']}\n\n")
 
+                # Complete the progress bar
+                history_progress_bar["value"] = 100
+                history_progress_bar.update()
+                return
+            except Exception as e:
+                logging.exception("Error displaying history results.")
+                messagebox.showerror("Error", f"An error occurred: {e}")
+                history_progress_bar["value"] = 100
+                history_progress_bar.update()
+                return
+
+    # If no results are found for the topic
     messagebox.showinfo("No Results", f"No results found for topic: {selected_topic}")
-    progress_bar["value"] = 100
-    progress_bar.update()
+    history_progress_bar["value"] = 100
+    history_progress_bar.update()
+
 
 
 def fetch_news_for_topic():
@@ -355,7 +407,7 @@ def fetch_news_for_topic():
         return
 
     try:
-        results = fetch_latest_news(topic)
+        results = fetch_latest_news(topic)  # Fetch using NewsSpider
         if results:
             add_to_history(topic, results)
             update_results(results)
@@ -363,7 +415,9 @@ def fetch_news_for_topic():
         else:
             messagebox.showinfo("No Results", f"No news found for topic: {topic}")
     except Exception as e:
+        logging.exception("Error fetching news with NewsSpider.")
         messagebox.showerror("Error", f"Error fetching news: {e}")
+
 
 def update_results(results):
     """Update the results display with news links."""
@@ -402,36 +456,36 @@ def run_script():
         # Fetch posts from the subreddit
         text_output.insert(tk.END, f"Fetching posts from r/{subreddit_name}...\n")
         text_output.update()
-        progress_bar['value'] = 0
-        progress_bar.update()
+        main_progress_bar['value'] = 0
+        main_progress_bar.update()
 
         posts = fetch_subreddit_posts(subreddit_name, timeframe_var.get(), UPVOTE_THRESHOLD)
-        progress_bar['value'] = 30
-        progress_bar.update()
+        main_progress_bar['value'] = 30
+        main_progress_bar.update()
 
         if not posts:
             text_output.insert(tk.END, "No posts found in the selected timeframe.\n")
-            progress_bar['value'] = 100
+            main_progress_bar['value'] = 100
             return
 
         # Filter posts with GPT
         text_output.insert(tk.END, "Filtering posts with GPT...\n")
         text_output.update()
         good_posts = filter_posts_with_gpt(posts)
-        progress_bar['value'] = 60
-        progress_bar.update()
+        main_progress_bar['value'] = 60
+        main_progress_bar.update()
 
         if not good_posts:
             text_output.insert(tk.END, "No good posts found after GPT filtering.\n")
-            progress_bar['value'] = 100
+            main_progress_bar['value'] = 100
             return
 
         # Analyze posts with GPT
         text_output.insert(tk.END, f"Analyzing {len(good_posts)} top posts...\n")
         text_output.update()
         analysis = analyze_posts_with_gpt4(good_posts, subreddit_name)
-        progress_bar['value'] = 100
-        progress_bar.update()
+        main_progress_bar['value'] = 100
+        main_progress_bar.update()
 
         # Display the analysis
         text_output.insert(tk.END, "\n===== ANALYSIS COMPLETE =====\n", "bold")
@@ -478,7 +532,7 @@ def create_gui():
     analysis_frame = ttk.Frame(notebook)
     notebook.add(analysis_frame, text="Main Analysis")
 
-    # Search History Tab
+    # History Tab
     history_frame = ttk.Frame(notebook)
     notebook.add(history_frame, text="History")
 
@@ -508,21 +562,34 @@ def create_gui():
     run_button = ttk.Button(frame, text="Run Analysis", command=run_script_thread)
     run_button.grid(column=0, row=2, columnspan=2, pady=10)
 
-    # Results Output
+    # Results Output for Main Analysis
     text_output = tk.Text(frame, wrap=tk.WORD, height=20, state=tk.NORMAL, font=("Arial", 12))
     text_output.grid(column=0, row=3, columnspan=2, padx=5, pady=5, sticky="nsew")
     frame.rowconfigure(3, weight=1)
     frame.columnconfigure(1, weight=1)
 
-    # Add a progress bar
-    progress_bar = ttk.Progressbar(frame, orient="horizontal", length=400, mode="determinate")
-    progress_bar.grid(column=0, row=4, columnspan=2, pady=10, padx=5, sticky="ew")
+    # Progress Bar for Main Analysis Tab
+    main_progress_bar = ttk.Progressbar(frame, orient="horizontal", length=400, mode="determinate")
+    main_progress_bar.grid(column=0, row=4, columnspan=2, pady=10, padx=5, sticky="ew")
 
-    # ===== Search History Tab Components =====
-    history_list = tk.Listbox(history_frame, height=20)
+    # ===== History Tab Components =====
+    history_list_frame = ttk.Frame(history_frame, padding="10")
+    history_list_frame.pack(fill=tk.BOTH, expand=True)
+    
+    # History List
+    history_list = tk.Listbox(history_list_frame, height=20)
     history_list.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
+    
+    # History Results Text
+    results_text = tk.Text(history_list_frame, wrap=tk.WORD, height=20, state=tk.NORMAL, font=("Arial", 12))
+    results_text.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
 
+    # View Selected Button
     ttk.Button(history_frame, text="View Selected", command=open_selected_history).pack(pady=5)
+    
+    # Progress Bar for History Tab
+    history_progress_bar = ttk.Progressbar(history_frame, orient="horizontal", length=400, mode="determinate")
+    history_progress_bar.pack(pady=5, padx=5, fill=tk.X)
 
     # Global References for Event Handling
     globals().update({
@@ -530,11 +597,14 @@ def create_gui():
         'timeframe_var': timeframe_var,
         'text_output': text_output,
         'history_list': history_list,
+        'results_text': results_text,
         'run_button': run_button,
-        'progress_bar': progress_bar,  # Add progress_bar to globals
+        'main_progress_bar': main_progress_bar,
+        'history_progress_bar': history_progress_bar,
     })
 
     return root
+
 
 # ===== Search History Functions =====
 def display_history():
@@ -552,4 +622,4 @@ if __name__ == "__main__":
         root.mainloop()
     except Exception as e:
         logging.exception("Fatal error in GUI.")
-        messagebox.showerror("Fatal Error", str(e))
+        messagebox.showerror("Fatal Error", str(e)) #
